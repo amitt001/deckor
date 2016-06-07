@@ -15,6 +15,8 @@ Decorators Supported:
 
 * timer : Measure execution time of functions
 
+.. code-block:: python
+
     @deckor.timer
     def fact(x):
         if x <= 0:
@@ -22,6 +24,8 @@ Decorators Supported:
         return x*fact(x-1)
 
 * cacheit : Cache intermediate results
+
+.. code-block:: python
 
     @deckor.cacheit
     def fact(x):
@@ -31,15 +35,19 @@ Decorators Supported:
 
 * trace : Print the pretty recursion trace
 
+.. code-block:: python
+
     @deckor.trace
     def fib(x):
         if x < 2:
             return x
         return fib(x-1)+fib(x-2)
 
-    fib(10)
+fib(10)
 
     Now, try trace with cacheit
+
+.. code-block:: python
 
     @deckor.cacheit
     @deckor.trace
@@ -52,12 +60,16 @@ Decorators Supported:
 
 * with_retries : function signature: with_retries(tries=5, delay=0, increment=0). Try execution of function with retries. Retry'tries' no of times. Delay of 'delay' seconds between retries. Increase the delay by 'increment' between retries
 
+.. code-block:: python
+
     @with_retries(5)
     def random_f():
         try: r = requests.get("random")
         except: return
 
 * syncronize : Provides very basic syncronization. Note: Not free from race condition only for basic usage
+
+.. code-block:: python
 
     import threading
     
