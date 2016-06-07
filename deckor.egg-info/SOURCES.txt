@@ -1,0 +1,8 @@
+README.rst
+setup.py
+deckor/__init__.py
+deckor/deckor.py
+deckor.egg-info/PKG-INFO
+deckor.egg-info/SOURCES.txt
+deckor.egg-info/dependency_links.txt
+deckor.egg-info/top_level.txt
